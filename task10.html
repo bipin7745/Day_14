@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Iterations</title>
+  </head>
+  <body>
+    <h1>JavaScript Objects</h1>
+    <h2>The Object.groupBy() Method</h2>
+    <p id="output"></p>
+    <script>
+      const fruits = [
+        { name: "apples", quantity: 300 },
+        { name: "bananas", quantity: 500 },
+        { name: "oranges", quantity: 200 },
+        { name: "kiwi", quantity: 150 },
+      ];
+      function mycallback({ quantity }) {
+        return quantity > 200 ? "ok" : "low";
+      }
+      const result = Object.groupBy(fruits, mycallback);
+
+        let text = "These fruits are Ok: <br>";
+      for (let [x, y] of result.ok.entries()) {
+        text += y.name + " " + y.quantity + "<br>";
+      }
+      let text2 = "These fruits are Low: <br>";
+      for (let [x, y] of result.low.entries()) {
+        text2 += y.name + " " + y.quantity + "<br>";
+      }
+      document.getElementById("output").innerHTML = text +"<br>" +text2;
+    </script>
+  </body>
+</html>

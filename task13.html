@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Object</h1>
+<h2>The getOwnPropertyNames() Method</h2>
+
+<p>This example list all the properties of an object.</p>
+
+<p id="output"></p>
+
+<script>
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  language: "EN"
+}
+
+Object.defineProperty(person, "language", {enumerable:false});
+
+document.getElementById("output").innerHTML = Object.getOwnPropertyNames(person);
+</script>
+
+</body>
+</html>

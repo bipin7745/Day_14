@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Iterations</title>
+</head>
+<body>
+<h1>JavaScript Objects</h1>
+<h2>The Object.fromEntries() Method</h2>
+
+    <p id="output"></p>
+    <script>
+        const person=[
+            ["name","Bipin"],
+            ["age",22],
+            ["city","Bengaluru"]
+        ];
+        const personObject = Object.fromEntries(person);
+        document.getElementById("output").innerHTML = personObject.name;
+    </script>
+</body>
+</html>

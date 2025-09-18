@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Destructuring</title>
+</head>
+<body>
+    <h1>JavaScript Object Destructuring</h1>
+
+<p>We can pick up values from specific index locations of an array:</p>
+
+    <p id="output"></p>
+
+    <script>
+       let array=[10,20,30,40,50,60,70];
+       let array2=[10,20,30,40,50,60,70,80,90];
+
+    const {[2]:a,[5]:b}=array;
+    const [x,y,,, ...rest]=array2;
+        document.getElementById("output").innerHTML="<p>a is " +a+" "+"<p>b is " + b+"<br> "+"<p>x is " + x +
+"<p>y is " + y +
+"<p>the rest is " + rest;
+    </script>
+</body>
+</html> 

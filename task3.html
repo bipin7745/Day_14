@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Destructuring</title>
+</head>
+<body>
+    <h1>JavaScript Object Destructuring</h1>
+    
+
+<p>Move array variables into single variables:</p>
+
+    <p id="output"></p>
+
+    <script>
+       let array=["lemon","orange","apple","bananas",];
+       let [a,d]=array;
+       let [,b,c]=array;
+        document.getElementById("output").innerHTML=a+" "+d+"<br> "+b+" "+c;
+    </script>
+</body>
+</html> 
